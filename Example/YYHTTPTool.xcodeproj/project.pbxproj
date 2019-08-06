@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		03E19A9C3D0D5158083FD662 /* Pods_YYHTTPTool_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYHTTPTool_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14B05D03D24B369EB6942984 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		14B05D03D24B369EB6942984 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		30410AFD37E42AB1E6E95D9C /* Pods-YYHTTPTool_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYHTTPTool_Example.debug.xcconfig"; path = "Target Support Files/Pods-YYHTTPTool_Example/Pods-YYHTTPTool_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		5FD56F2A90D55C9E8D138A47 /* Pods-YYHTTPTool_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYHTTPTool_Tests.release.xcconfig"; path = "Target Support Files/Pods-YYHTTPTool_Tests/Pods-YYHTTPTool_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* YYHTTPTool_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYHTTPTool_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,8 +65,8 @@
 		86352FDDEA45B2D979AC1B05 /* Pods-YYHTTPTool_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYHTTPTool_Example.release.xcconfig"; path = "Target Support Files/Pods-YYHTTPTool_Example/Pods-YYHTTPTool_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FE8965046982099F7AC91B9 /* Pods_YYHTTPTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYHTTPTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD5A37E69386D298E03B53E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B6A878E1C0BCFAE51B389B78 /* YYHTTPTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = YYHTTPTool.podspec; path = ../YYHTTPTool.podspec; sourceTree = "<group>"; };
+		AD5A37E69386D298E03B53E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B6A878E1C0BCFAE51B389B78 /* YYHTTPTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YYHTTPTool.podspec; path = ../YYHTTPTool.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				7E80295BC10A17FF7A62DCE8 /* Pods-YYHTTPTool_Tests.debug.xcconfig */,
 				5FD56F2A90D55C9E8D138A47 /* Pods-YYHTTPTool_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,10 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = YangYingBo;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = 5BAR54BY6N;
+						ProvisioningStyle = Manual;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +261,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -302,10 +306,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-YYHTTPTool_Example/Pods-YYHTTPTool_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/YYHTTPTool/YYHTTPTool.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYHTTPTool.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -494,12 +502,16 @@
 			baseConfigurationReference = 30410AFD37E42AB1E6E95D9C /* Pods-YYHTTPTool_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5BAR54BY6N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YYHTTPTool/YYHTTPTool-Prefix.pch";
 				INFOPLIST_FILE = "YYHTTPTool/YYHTTPTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.szacs.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = connect_test_dev;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
@@ -510,12 +522,16 @@
 			baseConfigurationReference = 86352FDDEA45B2D979AC1B05 /* Pods-YYHTTPTool_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 5BAR54BY6N;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "YYHTTPTool/YYHTTPTool-Prefix.pch";
 				INFOPLIST_FILE = "YYHTTPTool/YYHTTPTool-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_BUNDLE_IDENTIFIER = com.szacs.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = connect_test_dev;
 				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};

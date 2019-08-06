@@ -1,0 +1,6 @@
+framework module YYHTTPTool {
+  umbrella header "YYHTTPTool-umbrella.h"
+
+  export *
+  module * { export * }
+}
