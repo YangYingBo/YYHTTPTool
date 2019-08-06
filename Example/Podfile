@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'YYHTTPTool_Example' do
+  pod 'YYHTTPTool', :path => '../'
+
+  target 'YYHTTPTool_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
