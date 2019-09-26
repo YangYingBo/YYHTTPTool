@@ -1,6 +1,6 @@
 {
   "name": "YYHTTPTool",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "YYHTTPTool AFN封装.",
   "description": "TODO: YYHTTPTool 对AFN的封装并添加了RAC功能.",
   "homepage": "https://github.com/YangYingBo/YYHTTPTool",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/YangYingBo/YYHTTPTool.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"

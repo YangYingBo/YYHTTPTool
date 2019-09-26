@@ -66,7 +66,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9FE8965046982099F7AC91B9 /* Pods_YYHTTPTool_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYHTTPTool_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5A37E69386D298E03B53E2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		B6A878E1C0BCFAE51B389B78 /* YYHTTPTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YYHTTPTool.podspec; path = ../YYHTTPTool.podspec; sourceTree = "<group>"; };
+		B6A878E1C0BCFAE51B389B78 /* YYHTTPTool.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = YYHTTPTool.podspec; path = ../YYHTTPTool.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

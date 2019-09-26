@@ -46,6 +46,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (RACSignal *)RAC_PATCH:(NSString *)path parameters:(NSDictionary *)params;
 
+
+/// 网络请求
+/// @param path 网络请求地址
+/// @param params 网络请求参数
+/// @param method 网络请求方式
+- (RACSignal *)RAC_RequestWith:(NSString *)path parameters:(NSDictionary *)params method:(NSString *)method;
+
 /**
  以PUT请求方式上传资源
 
